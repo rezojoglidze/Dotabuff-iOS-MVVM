@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bbQ-wX-OTk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Controller-->
+        <scene sceneID="63V-ba-XOo">
+            <objects>
+                <viewController storyboardIdentifier="MainView" id="bbQ-wX-OTk" customClass="MainController" customModule="DotabuffiOS_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bDh-0D-47M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EhW-rx-ATS">
+                                <rect key="frame" x="20" y="44" width="374" height="200"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A4D-sG-wXK">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="A4D-sG-wXK" firstAttribute="leading" secondItem="EhW-rx-ATS" secondAttribute="leading" id="3XW-dJ-9rc"/>
+                                    <constraint firstAttribute="height" priority="999" constant="200" id="BK8-MA-wcF"/>
+                                    <constraint firstItem="A4D-sG-wXK" firstAttribute="top" secondItem="EhW-rx-ATS" secondAttribute="top" id="e81-eT-vdy"/>
+                                    <constraint firstAttribute="bottom" secondItem="A4D-sG-wXK" secondAttribute="bottom" id="foe-WD-r6d"/>
+                                    <constraint firstAttribute="trailing" secondItem="A4D-sG-wXK" secondAttribute="trailing" id="qCS-Aq-66T"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EhW-rx-ATS" firstAttribute="top" secondItem="QDu-XR-w1w" secondAttribute="top" id="6sX-WF-7Uc"/>
+                            <constraint firstItem="QDu-XR-w1w" firstAttribute="trailing" secondItem="EhW-rx-ATS" secondAttribute="trailing" constant="20" id="kyU-BS-YNo"/>
+                            <constraint firstItem="QDu-XR-w1w" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EhW-rx-ATS" secondAttribute="bottom" constant="20" id="qTv-Q6-CBj"/>
+                            <constraint firstItem="EhW-rx-ATS" firstAttribute="leading" secondItem="QDu-XR-w1w" secondAttribute="leading" constant="20" id="rBB-87-spH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QDu-XR-w1w"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerHeightConstraint" destination="BK8-MA-wcF" id="fOu-1w-810"/>
+                        <outlet property="containerView" destination="EhW-rx-ATS" id="BuI-zC-0qw"/>
+                        <outlet property="tableView" destination="A4D-sG-wXK" id="iNf-wH-lBa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2iu-zd-ELj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7" y="5"/>
+        </scene>
+    </scenes>
+</document>

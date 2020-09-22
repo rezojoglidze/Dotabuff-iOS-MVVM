@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1862B8A02D509C771F5A6D84 /* Pods_DotabuffiOS_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C4463746AFC18725E553EA /* Pods_DotabuffiOS_MVVM.framework */; };
+		F26BEDE3251A5EDC003374D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BEDE2251A5EDC003374D6 /* AppDelegate.swift */; };
+		F26BEDE5251A5EDC003374D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BEDE4251A5EDC003374D6 /* SceneDelegate.swift */; };
+		F26BEDE7251A5EDC003374D6 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BEDE6251A5EDC003374D6 /* MainController.swift */; };
+		F26BEDEA251A5EDC003374D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26BEDE8251A5EDC003374D6 /* Main.storyboard */; };
+		F26BEDEF251A5EE1003374D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26BEDED251A5EE1003374D6 /* LaunchScreen.storyboard */; };
+		F26BEDFF251A5F85003374D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26BEDF8251A5F85003374D6 /* Assets.xcassets */; };
+		F26BEE00251A5F85003374D6 /* Loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = F26BEDFA251A5F85003374D6 /* Loader.gif */; };
+		F26BEE01251A5F85003374D6 /* HelveticaNeueLTGEO-65Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F26BEDFC251A5F85003374D6 /* HelveticaNeueLTGEO-65Medium.otf */; };
+		F26BEE02251A5F85003374D6 /* HelveticaNeueLTGEO-75Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F26BEDFD251A5F85003374D6 /* HelveticaNeueLTGEO-75Bold.otf */; };
+		F26BEE03251A5F85003374D6 /* HelveticaNeueLTGEO-55Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = F26BEDFE251A5F85003374D6 /* HelveticaNeueLTGEO-55Roman.otf */; };
+		F26BEE11251A5FB3003374D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BEE10251A5FB3003374D6 /* Constants.swift */; };
+		F26BEE20251A5FDF003374D6 /* BasicResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BEE19251A5FDF003374D6 /* BasicResponseError.swift */; };
+		F26BEE21251A5FDF003374D6 /* GameModes.json in Resources */ = {isa = PBXBuildFile; fileRef = F26BEE1A251A5FDF003374D6 /* GameModes.json */; };
+		F26BEE28251A5FE9003374D6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BEE23251A5FE9003374D6 /* Extensions.swift */; };
+		F26BEE29251A5FE9003374D6 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BEE24251A5FE9003374D6 /* UIExtensions.swift */; };
+		F26BEE2A251A5FE9003374D6 /* BasicResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BEE26251A5FE9003374D6 /* BasicResponseHandler.swift */; };
+		F26BEE2B251A5FE9003374D6 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BEE27251A5FE9003374D6 /* BaseAPI.swift */; };
+		F26BEEA7251A6072003374D6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BEEA6251A6072003374D6 /* HomeViewController.swift */; };
+		F2D26DEE251A63AB004C86C7 /* MatchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D26DED251A63AB004C86C7 /* MatchDetails.swift */; };
+		F2D26DF0251A63CF004C86C7 /* TeamDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D26DEF251A63CF004C86C7 /* TeamDetails.swift */; };
+		F2D26DF2251A63E5004C86C7 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D26DF1251A63E5004C86C7 /* GameMode.swift */; };
+		F2D26DF6251A6461004C86C7 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D26DF4251A6461004C86C7 /* MainCell.swift */; };
+		F2D26DF7251A6461004C86C7 /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D26DF5251A6461004C86C7 /* MainCell.xib */; };
+		F2D26DF9251A671F004C86C7 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D26DF8251A671F004C86C7 /* MainViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		73C4463746AFC18725E553EA /* Pods_DotabuffiOS_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotabuffiOS_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4CBF941FF20CF6233148DF6 /* Pods-DotabuffiOS-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotabuffiOS-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-DotabuffiOS-MVVM/Pods-DotabuffiOS-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		F009FD78A51BA4652C4E1EF5 /* Pods-DotabuffiOS-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotabuffiOS-MVVM.release.xcconfig"; path = "Target Support Files/Pods-DotabuffiOS-MVVM/Pods-DotabuffiOS-MVVM.release.xcconfig"; sourceTree = "<group>"; };
+		F26BEDDF251A5EDC003374D6 /* DotabuffiOS-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DotabuffiOS-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F26BEDE2251A5EDC003374D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F26BEDE4251A5EDC003374D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F26BEDE6251A5EDC003374D6 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		F26BEDE9251A5EDC003374D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F26BEDEE251A5EE1003374D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F26BEDF0251A5EE1003374D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F26BEDF8251A5F85003374D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F26BEDFA251A5F85003374D6 /* Loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loader.gif; sourceTree = "<group>"; };
+		F26BEDFC251A5F85003374D6 /* HelveticaNeueLTGEO-65Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueLTGEO-65Medium.otf"; sourceTree = "<group>"; };
+		F26BEDFD251A5F85003374D6 /* HelveticaNeueLTGEO-75Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueLTGEO-75Bold.otf"; sourceTree = "<group>"; };
+		F26BEDFE251A5F85003374D6 /* HelveticaNeueLTGEO-55Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueLTGEO-55Roman.otf"; sourceTree = "<group>"; };
+		F26BEE10251A5FB3003374D6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F26BEE19251A5FDF003374D6 /* BasicResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicResponseError.swift; sourceTree = "<group>"; };
+		F26BEE1A251A5FDF003374D6 /* GameModes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GameModes.json; sourceTree = "<group>"; };
+		F26BEE23251A5FE9003374D6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F26BEE24251A5FE9003374D6 /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		F26BEE26251A5FE9003374D6 /* BasicResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicResponseHandler.swift; sourceTree = "<group>"; };
+		F26BEE27251A5FE9003374D6 /* BaseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		F26BEEA6251A6072003374D6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F2D26DED251A63AB004C86C7 /* MatchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetails.swift; sourceTree = "<group>"; };
+		F2D26DEF251A63CF004C86C7 /* TeamDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetails.swift; sourceTree = "<group>"; };
+		F2D26DF1251A63E5004C86C7 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		F2D26DF4251A6461004C86C7 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		F2D26DF5251A6461004C86C7 /* MainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
+		F2D26DF8251A671F004C86C7 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F26BEDDC251A5EDC003374D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1862B8A02D509C771F5A6D84 /* Pods_DotabuffiOS_MVVM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E542F9C3D1537BBB9168C5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4CBF941FF20CF6233148DF6 /* Pods-DotabuffiOS-MVVM.debug.xcconfig */,
+				F009FD78A51BA4652C4E1EF5 /* Pods-DotabuffiOS-MVVM.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F26BEDD6251A5EDC003374D6 = {
+			isa = PBXGroup;
+			children = (
+				F26BEDE1251A5EDC003374D6 /* DotabuffiOS-MVVM */,
+				F26BEDE0251A5EDC003374D6 /* Products */,
+				5E542F9C3D1537BBB9168C5A /* Pods */,
+				FC6128D7AFCA70CCF56B8B5B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F26BEDE0251A5EDC003374D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F26BEDDF251A5EDC003374D6 /* DotabuffiOS-MVVM.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F26BEDE1251A5EDC003374D6 /* DotabuffiOS-MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				F26BEDF7251A5F85003374D6 /* Resources */,
+				F26BEDF6251A5F6C003374D6 /* Supporting Files */,
+				F26BEE04251A5F93003374D6 /* Core */,
+				F26BEE0F251A5FB3003374D6 /* Constants */,
+				F26BEE12251A5FDF003374D6 /* Entities */,
+				F26BEE22251A5FE9003374D6 /* Extensions */,
+				F26BEE25251A5FE9003374D6 /* Networking */,
+				F26BEE69251A6046003374D6 /* AppModules */,
+				F2D26DE8251A6243004C86C7 /* MainModule */,
+			);
+			path = "DotabuffiOS-MVVM";
+			sourceTree = "<group>";
+		};
+		F26BEDF6251A5F6C003374D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F26BEDF0251A5EE1003374D6 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F26BEDF7251A5F85003374D6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F26BEDF8251A5F85003374D6 /* Assets.xcassets */,
+				F26BEDF9251A5F85003374D6 /* Loader */,
+				F26BEDFB251A5F85003374D6 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F26BEDF9251A5F85003374D6 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				F26BEDFA251A5F85003374D6 /* Loader.gif */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		F26BEDFB251A5F85003374D6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F26BEDFC251A5F85003374D6 /* HelveticaNeueLTGEO-65Medium.otf */,
+				F26BEDFD251A5F85003374D6 /* HelveticaNeueLTGEO-75Bold.otf */,
+				F26BEDFE251A5F85003374D6 /* HelveticaNeueLTGEO-55Roman.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F26BEE04251A5F93003374D6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F26BEE05251A5F93003374D6 /* App */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F26BEE05251A5F93003374D6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F26BEDED251A5EE1003374D6 /* LaunchScreen.storyboard */,
+				F26BEDE2251A5EDC003374D6 /* AppDelegate.swift */,
+				F26BEDE4251A5EDC003374D6 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F26BEE0F251A5FB3003374D6 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F26BEE10251A5FB3003374D6 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F26BEE12251A5FDF003374D6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F26BEE1A251A5FDF003374D6 /* GameModes.json */,
+				F26BEE13251A5FDF003374D6 /* Response */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F26BEE13251A5FDF003374D6 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				F2D26DED251A63AB004C86C7 /* MatchDetails.swift */,
+				F2D26DEF251A63CF004C86C7 /* TeamDetails.swift */,
+				F2D26DF1251A63E5004C86C7 /* GameMode.swift */,
+				F26BEE19251A5FDF003374D6 /* BasicResponseError.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		F26BEE22251A5FE9003374D6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F26BEE23251A5FE9003374D6 /* Extensions.swift */,
+				F26BEE24251A5FE9003374D6 /* UIExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F26BEE25251A5FE9003374D6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F26BEE26251A5FE9003374D6 /* BasicResponseHandler.swift */,
+				F26BEE27251A5FE9003374D6 /* BaseAPI.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F26BEE69251A6046003374D6 /* AppModules */ = {
+			isa = PBXGroup;
+			children = (
+				F26BEEA8251A6083003374D6 /* BaseControllers */,
+			);
+			path = AppModules;
+			sourceTree = "<group>";
+		};
+		F26BEEA8251A6083003374D6 /* BaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F26BEEA6251A6072003374D6 /* HomeViewController.swift */,
+			);
+			path = BaseControllers;
+			sourceTree = "<group>";
+		};
+		F2D26DE8251A6243004C86C7 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				F2D26DEC251A6283004C86C7 /* Model */,
+				F2D26DEB251A627B004C86C7 /* ViewModel */,
+				F2D26DE9251A624D004C86C7 /* View */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		F2D26DE9251A624D004C86C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2D26DF3251A644C004C86C7 /* MainCell */,
+				F26BEDE8251A5EDC003374D6 /* Main.storyboard */,
+				F26BEDE6251A5EDC003374D6 /* MainController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2D26DEB251A627B004C86C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F2D26DF8251A671F004C86C7 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F2D26DEC251A6283004C86C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2D26DF3251A644C004C86C7 /* MainCell */ = {
+			isa = PBXGroup;
+			children = (
+				F2D26DF4251A6461004C86C7 /* MainCell.swift */,
+				F2D26DF5251A6461004C86C7 /* MainCell.xib */,
+			);
+			path = MainCell;
+			sourceTree = "<group>";
+		};
+		FC6128D7AFCA70CCF56B8B5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73C4463746AFC18725E553EA /* Pods_DotabuffiOS_MVVM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F26BEDDE251A5EDC003374D6 /* DotabuffiOS-MVVM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F26BEDF3251A5EE1003374D6 /* Build configuration list for PBXNativeTarget "DotabuffiOS-MVVM" */;
+			buildPhases = (
+				786BD9D38BA17A932A568703 /* [CP] Check Pods Manifest.lock */,
+				F26BEDDB251A5EDC003374D6 /* Sources */,
+				F26BEDDC251A5EDC003374D6 /* Frameworks */,
+				F26BEDDD251A5EDC003374D6 /* Resources */,
+				B97C67533F3E2AB97F14CF4F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DotabuffiOS-MVVM";
+			productName = "DotabuffiOS-MVVM";
+			productReference = F26BEDDF251A5EDC003374D6 /* DotabuffiOS-MVVM.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F26BEDD7251A5EDC003374D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Rezo Joglidze";
+				TargetAttributes = {
+					F26BEDDE251A5EDC003374D6 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = F26BEDDA251A5EDC003374D6 /* Build configuration list for PBXProject "DotabuffiOS-MVVM" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F26BEDD6251A5EDC003374D6;
+			productRefGroup = F26BEDE0251A5EDC003374D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F26BEDDE251A5EDC003374D6 /* DotabuffiOS-MVVM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F26BEDDD251A5EDC003374D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F26BEE21251A5FDF003374D6 /* GameModes.json in Resources */,
+				F26BEE03251A5F85003374D6 /* HelveticaNeueLTGEO-55Roman.otf in Resources */,
+				F2D26DF7251A6461004C86C7 /* MainCell.xib in Resources */,
+				F26BEE01251A5F85003374D6 /* HelveticaNeueLTGEO-65Medium.otf in Resources */,
+				F26BEDEF251A5EE1003374D6 /* LaunchScreen.storyboard in Resources */,
+				F26BEE00251A5F85003374D6 /* Loader.gif in Resources */,
+				F26BEDFF251A5F85003374D6 /* Assets.xcassets in Resources */,
+				F26BEDEA251A5EDC003374D6 /* Main.storyboard in Resources */,
+				F26BEE02251A5F85003374D6 /* HelveticaNeueLTGEO-75Bold.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		786BD9D38BA17A932A568703 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DotabuffiOS-MVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B97C67533F3E2AB97F14CF4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DotabuffiOS-MVVM/Pods-DotabuffiOS-MVVM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DotabuffiOS-MVVM/Pods-DotabuffiOS-MVVM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DotabuffiOS-MVVM/Pods-DotabuffiOS-MVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F26BEDDB251A5EDC003374D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F26BEE20251A5FDF003374D6 /* BasicResponseError.swift in Sources */,
+				F2D26DF0251A63CF004C86C7 /* TeamDetails.swift in Sources */,
+				F26BEDE7251A5EDC003374D6 /* MainController.swift in Sources */,
+				F26BEE29251A5FE9003374D6 /* UIExtensions.swift in Sources */,
+				F26BEDE3251A5EDC003374D6 /* AppDelegate.swift in Sources */,
+				F2D26DF9251A671F004C86C7 /* MainViewModel.swift in Sources */,
+				F2D26DF2251A63E5004C86C7 /* GameMode.swift in Sources */,
+				F26BEEA7251A6072003374D6 /* HomeViewController.swift in Sources */,
+				F26BEE2A251A5FE9003374D6 /* BasicResponseHandler.swift in Sources */,
+				F2D26DF6251A6461004C86C7 /* MainCell.swift in Sources */,
+				F26BEDE5251A5EDC003374D6 /* SceneDelegate.swift in Sources */,
+				F26BEE11251A5FB3003374D6 /* Constants.swift in Sources */,
+				F2D26DEE251A63AB004C86C7 /* MatchDetails.swift in Sources */,
+				F26BEE28251A5FE9003374D6 /* Extensions.swift in Sources */,
+				F26BEE2B251A5FE9003374D6 /* BaseAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F26BEDE8251A5EDC003374D6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F26BEDE9251A5EDC003374D6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F26BEDED251A5EE1003374D6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F26BEDEE251A5EE1003374D6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F26BEDF1251A5EE1003374D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F26BEDF2251A5EE1003374D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F26BEDF4251A5EE1003374D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4CBF941FF20CF6233148DF6 /* Pods-DotabuffiOS-MVVM.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YC9A76K73N;
+				INFOPLIST_FILE = "$(SRCROOT)/DotabuffiOS-MVVM/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rezojoglidze.DotabuffiOS-MVVM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F26BEDF5251A5EE1003374D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F009FD78A51BA4652C4E1EF5 /* Pods-DotabuffiOS-MVVM.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YC9A76K73N;
+				INFOPLIST_FILE = "$(SRCROOT)/DotabuffiOS-MVVM/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rezojoglidze.DotabuffiOS-MVVM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F26BEDDA251A5EDC003374D6 /* Build configuration list for PBXProject "DotabuffiOS-MVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F26BEDF1251A5EE1003374D6 /* Debug */,
+				F26BEDF2251A5EE1003374D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F26BEDF3251A5EE1003374D6 /* Build configuration list for PBXNativeTarget "DotabuffiOS-MVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F26BEDF4251A5EE1003374D6 /* Debug */,
+				F26BEDF5251A5EE1003374D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F26BEDD7251A5EDC003374D6 /* Project object */;
+}
