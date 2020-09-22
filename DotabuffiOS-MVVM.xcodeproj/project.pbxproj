@@ -116,7 +116,6 @@
 				F26BEE22251A5FE9003374D6 /* Extensions */,
 				F26BEE25251A5FE9003374D6 /* Networking */,
 				F26BEE69251A6046003374D6 /* AppModules */,
-				F2D26DE8251A6243004C86C7 /* MainModule */,
 			);
 			path = "DotabuffiOS-MVVM";
 			sourceTree = "<group>";
@@ -225,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				F26BEEA8251A6083003374D6 /* BaseControllers */,
+				F2D26DE8251A6243004C86C7 /* MainModule */,
 			);
 			path = AppModules;
 			sourceTree = "<group>";
