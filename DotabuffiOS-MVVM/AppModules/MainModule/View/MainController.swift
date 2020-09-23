@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainController: UIViewController {
+class MainController: HomeViewController {
     
     //MARK: Class variable
     private var matchesIds: [Int] = []
@@ -24,16 +24,10 @@ class MainController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.delegate = self
         setupNavigaton()
         setupTableView()
+        setUpViewModel()
         configureContainerView()
-    }
-    
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        viewModel.ready()
     }
     
     override func viewWillLayoutSubviews() {
@@ -46,6 +40,11 @@ class MainController: UIViewController {
         navigationItem.title = "მთავარი"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.4392156863, green: 0.3882352941, blue: 0.9176470588, alpha: 1)
+    }
+    
+    func setUpViewModel(){
+        viewModel.delegate = self
+        viewModel.loadView()
     }
     
     func setupTableView() {
@@ -62,6 +61,7 @@ class MainController: UIViewController {
         containerView.layer.shadowOpacity = 0.1
     }
     
+    //MARK: navigation
     func showMatchDetailsView(matchId: Int) {
         let storyboard = UIStoryboard(name: "MatchDetails", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "MatchDetailsIdentifier") as! MatchDetailsController
@@ -91,11 +91,12 @@ extension MainController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension MainController: MainViewModelDelegate {
-    func didGetMatchIdForDetails(matchId: Int) {
-      showMatchDetailsView(matchId: matchId)
+    func didGetMatchesIds(matchesIds: [Int]) {
+        self.matchesIds = matchesIds
     }
     
-    func didGetUserData(matchesIds: [Int]) {
-        self.matchesIds = matchesIds
+    //MARK: navigation
+    func didGetMatchIdForDetailsView(matchId: Int) {
+      showMatchDetailsView(matchId: matchId)
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TeamDetailsController: UIViewController {
+class TeamDetailsController: HomeViewController {
     
     //MARK: Class variable
     private var teamDetails: [TeamDetailsItem] = []
@@ -22,21 +22,21 @@ class TeamDetailsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureView()
+        self.startLoading()
+        setUpViewModel()
         setupNavigaton()
         setupTableView()
     }
     
     //MARK: View Setup
-    private func configureView() {
-        self.startLoading()
+    private func setUpViewModel() {
         viewModel.delegate = self
         if let teamId = teamId {
             viewModel.getTeamDetails(teamId: teamId)
         }
     }
     
-   private func setupNavigaton() {
+    private func setupNavigaton() {
         navigationItem.title = "გუნდის დეტალები"
     }
     
@@ -47,6 +47,7 @@ class TeamDetailsController: UIViewController {
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 1))
     }
     
+    //MARK: navigation
     private func showApiCallErrorAlert() {
         let alert = UIAlertController(title: nil, message: "სამწუხაროდ, მოხდა შეფერხება. სცადეთ მოგვიანებით.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)

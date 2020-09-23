@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class MatchDetailsController: UIViewController {
+class MatchDetailsController: HomeViewController {
     //MARK: Class variable
     private var matchDetails: MatchDetails!
     private lazy var viewModel = MatchDetailsViewModel()
@@ -32,7 +32,8 @@ class MatchDetailsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureView()
+        self.startLoading()
+        setUpViewModel()
         setupNavigaton()
         addTargetToBtns()
     }
@@ -64,8 +65,7 @@ class MatchDetailsController: UIViewController {
         navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.4392156863, green: 0.3882352941, blue: 0.9176470588, alpha: 1)
     }
     
-    func configureView() {
-        self.startLoading()
+    func setUpViewModel() {
         viewModel.delegate = self
         if let matchId = matchId {
             viewModel.getMatchDetails(matchId: matchId)
@@ -145,6 +145,7 @@ class MatchDetailsController: UIViewController {
         return nil
     }
     
+    //MARK: navigation
     func showApiCallErrorAlert() {
         let alert = UIAlertController(title: nil, message: "სამწუხაროდ, მოხდა შეფერხება. სცადეთ მოგვიანებით.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)

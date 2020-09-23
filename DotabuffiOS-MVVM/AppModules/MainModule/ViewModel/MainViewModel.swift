@@ -9,8 +9,8 @@
 import Foundation
 
 protocol MainViewModelDelegate: class {
-    func didGetUserData(matchesIds: [Int])
-    func didGetMatchIdForDetails(matchId: Int)
+    func didGetMatchesIds(matchesIds: [Int])
+    func didGetMatchIdForDetailsView(matchId: Int)
 }
 
 final class MainViewModel {
@@ -20,14 +20,13 @@ final class MainViewModel {
     private var matchesIds: [Int] = []
     
     
-    // Inputs
-    func ready() {
+    func loadView() {
         self.matchesIds = [ 5620275364, 271145478, 5619999390, 5620013443, 5619991492, 5619992102 ]
-        delegate?.didGetUserData(matchesIds: matchesIds)
+        delegate?.didGetMatchesIds(matchesIds: matchesIds)
     }
     
     func didSelectRow(at indexPath: IndexPath) {
         if matchesIds.isEmpty { return }
-        delegate?.didGetMatchIdForDetails(matchId: matchesIds[indexPath.row])
+        delegate?.didGetMatchIdForDetailsView(matchId: matchesIds[indexPath.row])
     }
 }
