@@ -11,6 +11,7 @@ import Foundation
 protocol MatchDetailsViewModelDelegate: class {
     func didGetMatchDetails(matchDetails: MatchDetails)
     func didGetApiCallError()
+    func didGetTeamIdForDetails(teamId: Int)
 }
 
 class MatchDetailsViewModel {
@@ -32,4 +33,16 @@ class MatchDetailsViewModel {
         }
     }
     
+    
+     func getRadianTeamIdForDetails() {
+//           if let radianTeam = matchDetails?.radiantTeam {
+               delegate?.didGetTeamIdForDetails(teamId: 36)//radianTeam.teamId)
+//           }
+       }
+    
+    func getDireTeamIdForDetails() {
+//          if let direTeam = matchDetails?.direTeam {
+              delegate?.didGetTeamIdForDetails(teamId: 36)//direTeam.teamId)
+//          }
+      }
 }

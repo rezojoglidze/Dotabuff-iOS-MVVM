@@ -12,6 +12,10 @@
 		F2318CF6251B32BD00BCEE6F /* MatchDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2318CF5251B32BD00BCEE6F /* MatchDetailsController.swift */; };
 		F2318CF8251B32F200BCEE6F /* MatchDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2318CF7251B32F200BCEE6F /* MatchDetails.storyboard */; };
 		F2318CFE251B451300BCEE6F /* TeamDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2318CFD251B451300BCEE6F /* TeamDetails.storyboard */; };
+		F2318D00251B454600BCEE6F /* TeamDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2318CFF251B454600BCEE6F /* TeamDetailsController.swift */; };
+		F2318D02251B455600BCEE6F /* TeamDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2318D01251B455600BCEE6F /* TeamDetailsViewModel.swift */; };
+		F2318D06251B458800BCEE6F /* TeamDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2318D04251B458800BCEE6F /* TeamDetailsCell.swift */; };
+		F2318D07251B458800BCEE6F /* TeamDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2318D05251B458800BCEE6F /* TeamDetailsCell.xib */; };
 		F26BEDE3251A5EDC003374D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BEDE2251A5EDC003374D6 /* AppDelegate.swift */; };
 		F26BEDE5251A5EDC003374D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BEDE4251A5EDC003374D6 /* SceneDelegate.swift */; };
 		F26BEDE7251A5EDC003374D6 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BEDE6251A5EDC003374D6 /* MainController.swift */; };
@@ -46,6 +50,10 @@
 		F2318CF5251B32BD00BCEE6F /* MatchDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsController.swift; sourceTree = "<group>"; };
 		F2318CF7251B32F200BCEE6F /* MatchDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MatchDetails.storyboard; sourceTree = "<group>"; };
 		F2318CFD251B451300BCEE6F /* TeamDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamDetails.storyboard; sourceTree = "<group>"; };
+		F2318CFF251B454600BCEE6F /* TeamDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsController.swift; sourceTree = "<group>"; };
+		F2318D01251B455600BCEE6F /* TeamDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewModel.swift; sourceTree = "<group>"; };
+		F2318D04251B458800BCEE6F /* TeamDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsCell.swift; sourceTree = "<group>"; };
+		F2318D05251B458800BCEE6F /* TeamDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamDetailsCell.xib; sourceTree = "<group>"; };
 		F26BEDDF251A5EDC003374D6 /* DotabuffiOS-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DotabuffiOS-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26BEDE2251A5EDC003374D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F26BEDE4251A5EDC003374D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,7 +151,9 @@
 		F2318CFA251B44E000BCEE6F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F2318D03251B456D00BCEE6F /* TeamDetailsCell */,
 				F2318CFD251B451300BCEE6F /* TeamDetails.storyboard */,
+				F2318CFF251B454600BCEE6F /* TeamDetailsController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,6 +161,7 @@
 		F2318CFB251B44E700BCEE6F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F2318D01251B455600BCEE6F /* TeamDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -160,6 +171,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F2318D03251B456D00BCEE6F /* TeamDetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				F2318D04251B458800BCEE6F /* TeamDetailsCell.swift */,
+				F2318D05251B458800BCEE6F /* TeamDetailsCell.xib */,
+			);
+			path = TeamDetailsCell;
 			sourceTree = "<group>";
 		};
 		F26BEDD6251A5EDC003374D6 = {
@@ -426,6 +446,7 @@
 				F26BEDEF251A5EE1003374D6 /* LaunchScreen.storyboard in Resources */,
 				F26BEE00251A5F85003374D6 /* Loader.gif in Resources */,
 				F26BEDFF251A5F85003374D6 /* Assets.xcassets in Resources */,
+				F2318D07251B458800BCEE6F /* TeamDetailsCell.xib in Resources */,
 				F26BEDEA251A5EDC003374D6 /* Main.storyboard in Resources */,
 				F26BEE02251A5F85003374D6 /* HelveticaNeueLTGEO-75Bold.otf in Resources */,
 			);
@@ -483,10 +504,12 @@
 				F26BEE20251A5FDF003374D6 /* BasicResponseError.swift in Sources */,
 				F2D26DF0251A63CF004C86C7 /* TeamDetails.swift in Sources */,
 				F26BEDE7251A5EDC003374D6 /* MainController.swift in Sources */,
+				F2318D02251B455600BCEE6F /* TeamDetailsViewModel.swift in Sources */,
 				F26BEE29251A5FE9003374D6 /* UIExtensions.swift in Sources */,
 				F26BEDE3251A5EDC003374D6 /* AppDelegate.swift in Sources */,
 				F2318CF4251B322900BCEE6F /* MatchDetailsViewModel.swift in Sources */,
 				F2318CF6251B32BD00BCEE6F /* MatchDetailsController.swift in Sources */,
+				F2318D00251B454600BCEE6F /* TeamDetailsController.swift in Sources */,
 				F2D26DF9251A671F004C86C7 /* MainViewModel.swift in Sources */,
 				F2D26DF2251A63E5004C86C7 /* GameMode.swift in Sources */,
 				F26BEEA7251A6072003374D6 /* HomeViewController.swift in Sources */,
@@ -495,6 +518,7 @@
 				F26BEDE5251A5EDC003374D6 /* SceneDelegate.swift in Sources */,
 				F26BEE11251A5FB3003374D6 /* Constants.swift in Sources */,
 				F2D26DEE251A63AB004C86C7 /* MatchDetailsModel.swift in Sources */,
+				F2318D06251B458800BCEE6F /* TeamDetailsCell.swift in Sources */,
 				F26BEE28251A5FE9003374D6 /* Extensions.swift in Sources */,
 				F26BEE2B251A5FE9003374D6 /* BaseAPI.swift in Sources */,
 			);

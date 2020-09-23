@@ -13,7 +13,6 @@ class MatchDetailsController: UIViewController {
     //MARK: Class variable
     private var matchDetails: MatchDetails!
     private lazy var viewModel = MatchDetailsViewModel()
-
     
     //MARK: IBOutlet
     @IBOutlet weak var winnerTeamImg: UIImageView!
@@ -31,14 +30,11 @@ class MatchDetailsController: UIViewController {
     //MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.startLoading()
-        viewModel.delegate = self
-        viewModel.getMatchDetails(matchId: 271145478)
+                
+        configureView()
         setupNavigaton()
         addTargetToBtns()
     }
-    
     
     func addTargetToBtns() {
         radiantBtn.addTarget(self, action: #selector(handleRadiantTeam), for: .touchUpInside)
@@ -52,13 +48,11 @@ class MatchDetailsController: UIViewController {
     }
     
     @objc func handleRadiantTeam(){
-        print("handleRadiantTeam")
-        //        presenter.didGetTeamIdForDetails(teamId: matchDetails.radiantTeam!.teamId)
+        viewModel.getRadianTeamIdForDetails()
     }
     
     @objc func handleDireTeam(){
-        print("handleDireTeam")
-        //        presenter.didGetTeamIdForDetails(teamId: matchDetails.direTeam!.teamId)
+        viewModel.getDireTeamIdForDetails()
     }
     
     
@@ -67,6 +61,12 @@ class MatchDetailsController: UIViewController {
         navigationItem.title = "მატჩის დეტალები"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.4392156863, green: 0.3882352941, blue: 0.9176470588, alpha: 1)
+    }
+    
+    func configureView() {
+        self.startLoading()
+        viewModel.delegate = self
+        viewModel.getMatchDetails(matchId: 271145478)
     }
     
     func secondsToTimeString(seconds : Int) -> String {
@@ -148,6 +148,13 @@ class MatchDetailsController: UIViewController {
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func showTeamDetails(teamId: Int) {
+        let storyboard = UIStoryboard(name: "TeamDetails", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "TeamDetailsIdentifier")
+        controller.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
 extension MatchDetailsController: MatchDetailsViewModelDelegate {
@@ -161,5 +168,10 @@ extension MatchDetailsController: MatchDetailsViewModelDelegate {
     
     func didGetApiCallError() {
         showApiCallErrorAlert()
+    }
+    
+    //MARK: Navigation
+    func didGetTeamIdForDetails(teamId: Int) {
+        showTeamDetails(teamId: teamId)
     }
 }

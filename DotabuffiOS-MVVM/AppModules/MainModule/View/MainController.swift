@@ -13,7 +13,7 @@ class MainController: UIViewController {
     //MARK: Class variable
     private var matchesIds: [Int] = []
     private lazy var viewModel = MainViewModel()
-
+    
     //MARK: IBOutlet
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var containerView: UIView!
