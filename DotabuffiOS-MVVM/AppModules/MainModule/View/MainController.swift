@@ -24,13 +24,13 @@ class MainController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel.delegate = self
         setupNavigaton()
         setupTableView()
         configureContainerView()
-        setupViewModel()
     }
     
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.ready()
@@ -62,21 +62,11 @@ class MainController: UIViewController {
         containerView.layer.shadowOpacity = 0.1
     }
     
-    private func setupViewModel() {
-        viewModel = MainViewModel()
-        
-        viewModel.isFirstLoaded = { [weak self] matchesIds in
-            self?.matchesIds = matchesIds
-            self?.tableView.reloadData()
-            print("matchesIds -> \(matchesIds)")
-        }
-        
-        viewModel.didSelecteMatch = { [weak self] id in
-            let alertController = UIAlertController(title: "\(id)", message: nil, preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            self?.present(alertController, animated: true, completion: nil)
-            print("id -> \(id)")
-        }
+    func showMatchDetailsView(matchId: Int) {        
+        let storyboard = UIStoryboard(name: "MatchDetails", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "MatchDetailsIdentifier")
+        controller.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 
@@ -99,3 +89,12 @@ extension MainController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+extension MainController: MainViewModelDelegate {
+    func didGetMatchIdForDetails(matchId: Int) {
+      showMatchDetailsView(matchId: matchId)
+    }
+    
+    func didGetUserData(matchesIds: [Int]) {
+        self.matchesIds = matchesIds
+    }
+}

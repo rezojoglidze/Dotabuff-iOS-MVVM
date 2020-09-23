@@ -8,26 +8,26 @@
 
 import Foundation
 
+protocol MainViewModelDelegate: class {
+    func didGetUserData(matchesIds: [Int])
+    func didGetMatchIdForDetails(matchId: Int)
+}
+
 final class MainViewModel {
     
     //MARK: Class variable
-    private var matchesIds: [Int] = [Int] () {
-        didSet {
-            isFirstLoaded?(matchesIds)
-        }
-    }
-    
-    var isFirstLoaded: (([Int]) -> Void)?
-    var didSelecteMatch: ((Int) -> Void)?
+    weak var delegate: MainViewModelDelegate?
+    private var matchesIds: [Int] = []
     
     
     // Inputs
     func ready() {
         self.matchesIds = [ 5620275364, 271145478, 5619999390, 5620013443, 5619991492, 5619992102 ]
+        delegate?.didGetUserData(matchesIds: matchesIds)
     }
     
     func didSelectRow(at indexPath: IndexPath) {
         if matchesIds.isEmpty { return }
-        didSelecteMatch?(matchesIds[indexPath.item])
+        delegate?.didGetMatchIdForDetails(matchId: matchesIds[indexPath.row])
     }
 }

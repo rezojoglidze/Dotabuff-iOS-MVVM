@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLTGEO-55Roman.otf">
+            <string>HelveticaNeueLTGEO-55Roman</string>
+        </array>
+        <array key="HelveticaNeueLTGEO-65Medium.otf">
+            <string>HelveticaNeueLTGEO-65Medium</string>
+        </array>
+        <array key="HelveticaNeueLTGEO-75Bold.otf">
+            <string>HelveticaNeueLTGEO-75Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Match Details Controller-->
+        <scene sceneID="UU3-sh-oJj">
+            <objects>
+                <viewController storyboardIdentifier="MatchDetailsIdentifier" id="3IT-NM-5QA" customClass="MatchDetailsController" customModule="DotabuffiOS_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PKM-RB-bdz"/>
+                        <viewControllerLayoutGuide type="bottom" id="1tA-3y-S6c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0gV-je-ND9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="enw-SE-CN6">
+                                <rect key="frame" x="139" y="315" width="136.5" height="27"/>
+                                <subviews>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q7I-jq-MHJ">
+                                        <rect key="frame" x="0.0" y="-9" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="1sr-xR-Ivc"/>
+                                            <constraint firstAttribute="width" constant="45" id="sh8-FQ-292"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Victory Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ve-aQ-AXa">
+                                        <rect key="frame" x="0.0" y="0.0" width="136.5" height="27"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-65Medium" family="Helvetica Neue LT GEO" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2co-Bt-mSZ">
+                                <rect key="frame" x="91.5" y="402" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="9At-kH-fHY"/>
+                                    <constraint firstAttribute="height" constant="20" id="9v5-5z-dC1"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukd-ef-EOX">
+                                <rect key="frame" x="116.5" y="402" width="74" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="ocZ-yA-7xW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-75Bold" family="Helvetica Neue LT GEO" pointSize="20"/>
+                                <state key="normal" title="Radiant">
+                                    <color key="titleColor" red="0.058823529409999999" green="0.050980392159999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IX-Q1-icj">
+                                <rect key="frame" x="240.5" y="402" width="40" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-75Bold" family="Helvetica Neue LT GEO" pointSize="20"/>
+                                <state key="normal" title="Dire">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Dsv-Jk-00C">
+                                <rect key="frame" x="134" y="427" width="146" height="42.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBx-W4-3MQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="39" height="42.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-75Bold" family="Helvetica Neue LT GEO" pointSize="35"/>
+                                        <color key="textColor" red="0.57254901960000004" green="0.64705882349999999" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ck-L5-2pq">
+                                        <rect key="frame" x="54" y="0.0" width="38" height="42.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-75Bold" family="Helvetica Neue LT GEO" pointSize="15"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.050980392159999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiC-1k-DfE">
+                                        <rect key="frame" x="107" y="0.0" width="39" height="42.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-75Bold" family="Helvetica Neue LT GEO" pointSize="35"/>
+                                        <color key="textColor" red="0.76078431369999999" green="0.23529411759999999" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lcr-eJ-ddN">
+                                <rect key="frame" x="20" y="519.5" width="148.5" height="47"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0a1-wC-XHX">
+                                        <rect key="frame" x="0.0" y="0.0" width="148.5" height="18.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="მატჩის მოუდი :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nz-8n-DV8">
+                                                <rect key="frame" x="0.0" y="0.0" width="116" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-55Roman" family="Helvetica Neue LT GEO" pointSize="15"/>
+                                                <color key="textColor" red="0.5568627451" green="0.55294117649999996" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncK-sW-Gz0">
+                                                <rect key="frame" x="131" y="0.0" width="17.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-75Bold" family="Helvetica Neue LT GEO" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lID-Gu-Avf">
+                                        <rect key="frame" x="0.0" y="28.5" width="148.5" height="18.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="პირველი გოლი:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4R-PV-BKG">
+                                                <rect key="frame" x="0.0" y="0.0" width="116" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-55Roman" family="Helvetica Neue LT GEO" pointSize="15"/>
+                                                <color key="textColor" red="0.5568627451" green="0.55294117649999996" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbY-XK-qbQ">
+                                                <rect key="frame" x="131" y="0.0" width="17.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-75Bold" family="Helvetica Neue LT GEO" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hj1-iB-twa">
+                                <rect key="frame" x="285.5" y="402" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="9pm-zI-XHp"/>
+                                    <constraint firstAttribute="width" constant="20" id="Gyb-gk-VVo"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dsv-Jk-00C" firstAttribute="centerX" secondItem="0gV-je-ND9" secondAttribute="centerX" id="6fN-Z2-bZH"/>
+                            <constraint firstItem="2co-Bt-mSZ" firstAttribute="centerY" secondItem="ukd-ef-EOX" secondAttribute="centerY" id="92d-Ep-jVS"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lcr-eJ-ddN" secondAttribute="trailing" constant="20" id="9yG-bj-E3Y"/>
+                            <constraint firstItem="Dsv-Jk-00C" firstAttribute="top" secondItem="6IX-Q1-icj" secondAttribute="bottom" constant="5" id="Ksb-qg-n6a"/>
+                            <constraint firstItem="lcr-eJ-ddN" firstAttribute="top" secondItem="Dsv-Jk-00C" secondAttribute="bottom" constant="50" id="MYj-yE-6rF"/>
+                            <constraint firstItem="enw-SE-CN6" firstAttribute="centerX" secondItem="0gV-je-ND9" secondAttribute="centerX" id="O57-4T-BQS"/>
+                            <constraint firstItem="6IX-Q1-icj" firstAttribute="centerY" secondItem="ukd-ef-EOX" secondAttribute="centerY" id="Q38-yM-RKI"/>
+                            <constraint firstItem="Dsv-Jk-00C" firstAttribute="top" secondItem="ukd-ef-EOX" secondAttribute="bottom" constant="5" id="Rcb-In-eUk"/>
+                            <constraint firstItem="Dsv-Jk-00C" firstAttribute="centerY" secondItem="0gV-je-ND9" secondAttribute="centerY" id="Sam-Za-3Ao"/>
+                            <constraint firstItem="Hj1-iB-twa" firstAttribute="leading" secondItem="6IX-Q1-icj" secondAttribute="trailing" constant="5" id="YP3-Oc-ns5"/>
+                            <constraint firstItem="ukd-ef-EOX" firstAttribute="top" secondItem="enw-SE-CN6" secondAttribute="bottom" constant="60" id="aP9-i2-eju"/>
+                            <constraint firstItem="ukd-ef-EOX" firstAttribute="leading" secondItem="2co-Bt-mSZ" secondAttribute="trailing" constant="5" id="aTa-lB-GT1"/>
+                            <constraint firstItem="ukd-ef-EOX" firstAttribute="centerX" secondItem="EBx-W4-3MQ" secondAttribute="centerX" id="brh-0l-S7H"/>
+                            <constraint firstItem="lcr-eJ-ddN" firstAttribute="leading" secondItem="0gV-je-ND9" secondAttribute="leading" constant="20" id="gab-tf-NGC"/>
+                            <constraint firstItem="6IX-Q1-icj" firstAttribute="centerX" secondItem="JiC-1k-DfE" secondAttribute="centerX" id="hjd-7K-EnA"/>
+                            <constraint firstItem="Hj1-iB-twa" firstAttribute="centerY" secondItem="6IX-Q1-icj" secondAttribute="centerY" id="jLG-sx-ucq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2G7-2S-s0d"/>
+                    </view>
+                    <connections>
+                        <outlet property="direBtn" destination="6IX-Q1-icj" id="8df-yG-oRF"/>
+                        <outlet property="direImg" destination="Hj1-iB-twa" id="wB4-5z-wul"/>
+                        <outlet property="direScoreLbl" destination="JiC-1k-DfE" id="7dz-PP-Kp8"/>
+                        <outlet property="firstBloodTimeLbl" destination="BbY-XK-qbQ" id="6X9-iA-7dA"/>
+                        <outlet property="gameModeLbl" destination="ncK-sW-Gz0" id="Ej3-qN-DbS"/>
+                        <outlet property="matchDurationLbl" destination="5ck-L5-2pq" id="qBa-h3-VeT"/>
+                        <outlet property="radiantBtn" destination="ukd-ef-EOX" id="C0a-UH-OTK"/>
+                        <outlet property="radiantImg" destination="2co-Bt-mSZ" id="ESo-N1-eht"/>
+                        <outlet property="radiantScoreLbl" destination="EBx-W4-3MQ" id="r0O-Pd-jJ7"/>
+                        <outlet property="winnerTeamImg" destination="Q7I-jq-MHJ" id="HEO-Il-ujZ"/>
+                        <outlet property="winnerTeamLbl" destination="1ve-aQ-AXa" id="2U5-kf-xHo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xqV-9y-UeG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294.20289855072468" y="355.58035714285711"/>
+        </scene>
+    </scenes>
+</document>
