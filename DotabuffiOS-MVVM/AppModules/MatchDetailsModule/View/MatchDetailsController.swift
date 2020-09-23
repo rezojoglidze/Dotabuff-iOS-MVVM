@@ -13,6 +13,7 @@ class MatchDetailsController: UIViewController {
     //MARK: Class variable
     private var matchDetails: MatchDetails!
     private lazy var viewModel = MatchDetailsViewModel()
+    var matchId: Int?
     
     //MARK: IBOutlet
     @IBOutlet weak var winnerTeamImg: UIImageView!
@@ -30,7 +31,7 @@ class MatchDetailsController: UIViewController {
     //MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+
         configureView()
         setupNavigaton()
         addTargetToBtns()
@@ -66,7 +67,9 @@ class MatchDetailsController: UIViewController {
     func configureView() {
         self.startLoading()
         viewModel.delegate = self
-        viewModel.getMatchDetails(matchId: 271145478)
+        if let matchId = matchId {
+            viewModel.getMatchDetails(matchId: matchId)
+        }
     }
     
     func secondsToTimeString(seconds : Int) -> String {
@@ -151,7 +154,8 @@ class MatchDetailsController: UIViewController {
     
     func showTeamDetails(teamId: Int) {
         let storyboard = UIStoryboard(name: "TeamDetails", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "TeamDetailsIdentifier")
+        let controller = storyboard.instantiateViewController(withIdentifier: "TeamDetailsIdentifier") as! TeamDetailsController
+        controller.teamId = teamId
         controller.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(controller, animated: true)
     }

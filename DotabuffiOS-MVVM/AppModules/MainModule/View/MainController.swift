@@ -62,9 +62,10 @@ class MainController: UIViewController {
         containerView.layer.shadowOpacity = 0.1
     }
     
-    func showMatchDetailsView(matchId: Int) {        
+    func showMatchDetailsView(matchId: Int) {
         let storyboard = UIStoryboard(name: "MatchDetails", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "MatchDetailsIdentifier")
+        let controller = storyboard.instantiateViewController(withIdentifier: "MatchDetailsIdentifier") as! MatchDetailsController
+        controller.matchId = matchId
         controller.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(controller, animated: true)
     }

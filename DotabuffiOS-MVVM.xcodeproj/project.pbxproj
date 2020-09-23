@@ -169,6 +169,8 @@
 		F2318CFC251B44EB00BCEE6F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F2D26DEF251A63CF004C86C7 /* TeamDetails.swift */,
+				F2D26DF1251A63E5004C86C7 /* GameMode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,19 +283,9 @@
 			isa = PBXGroup;
 			children = (
 				F26BEE1A251A5FDF003374D6 /* GameModes.json */,
-				F26BEE13251A5FDF003374D6 /* Response */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		F26BEE13251A5FDF003374D6 /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				F2D26DEF251A63CF004C86C7 /* TeamDetails.swift */,
-				F2D26DF1251A63E5004C86C7 /* GameMode.swift */,
 				F26BEE19251A5FDF003374D6 /* BasicResponseError.swift */,
 			);
-			path = Response;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		F26BEE22251A5FE9003374D6 /* Extensions */ = {

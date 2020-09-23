@@ -13,7 +13,8 @@ class TeamDetailsController: UIViewController {
     //MARK: Class variable
     private var teamDetails: [TeamDetailsItem] = []
     private lazy var viewModel = TeamDetailsViewModel()
-    
+    var teamId: Int?
+
     //MARK: IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
@@ -27,24 +28,26 @@ class TeamDetailsController: UIViewController {
     }
     
     //MARK: View Setup
-    func configureView() {
+    private func configureView() {
         self.startLoading()
         viewModel.delegate = self
-        viewModel.getTeamDetails(teamId: 36)
+        if let teamId = teamId {
+            viewModel.getTeamDetails(teamId: teamId)
+        }
     }
     
-    func setupNavigaton() {
+   private func setupNavigaton() {
         navigationItem.title = "გუნდის დეტალები"
     }
     
-    func setupTableView() {
+    private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TeamDetailsCell", bundle: nil), forCellReuseIdentifier: "TeamDetailsCell")
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 1))
     }
     
-    func showApiCallErrorAlert() {
+    private func showApiCallErrorAlert() {
         let alert = UIAlertController(title: nil, message: "სამწუხაროდ, მოხდა შეფერხება. სცადეთ მოგვიანებით.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)

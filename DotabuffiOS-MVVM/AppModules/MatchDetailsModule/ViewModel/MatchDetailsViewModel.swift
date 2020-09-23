@@ -15,10 +15,8 @@ protocol MatchDetailsViewModelDelegate: class {
 }
 
 class MatchDetailsViewModel {
-    
     private var matchDetails: MatchDetails?
     weak var delegate: MatchDetailsViewModelDelegate?
-    
     
     func getMatchDetails(matchId: Int) {
         BaseAPI.shared.getMatchDetails(matchId: matchId) { [weak self] (result) in
@@ -33,16 +31,15 @@ class MatchDetailsViewModel {
         }
     }
     
-    
      func getRadianTeamIdForDetails() {
-//           if let radianTeam = matchDetails?.radiantTeam {
-               delegate?.didGetTeamIdForDetails(teamId: 36)//radianTeam.teamId)
-//           }
+           if let radianTeam = matchDetails?.radiantTeam {
+               delegate?.didGetTeamIdForDetails(teamId: radianTeam.teamId)
+           }
        }
     
     func getDireTeamIdForDetails() {
-//          if let direTeam = matchDetails?.direTeam {
-              delegate?.didGetTeamIdForDetails(teamId: 36)//direTeam.teamId)
-//          }
+          if let direTeam = matchDetails?.direTeam {
+              delegate?.didGetTeamIdForDetails(teamId: direTeam.teamId)
+          }
       }
 }
