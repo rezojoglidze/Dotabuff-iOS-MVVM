@@ -22,7 +22,7 @@ class TeamDetailsViewModel {
     
     weak var delegate: TeamDetailsViewModelDelegate?
     
-    private func secondsToTimeString(seconds : Int) -> String{
+    private func secondsToTimeString(seconds : Int) -> String {
         let date = Date(timeIntervalSince1970: TimeInterval(seconds))
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy HH:mm"

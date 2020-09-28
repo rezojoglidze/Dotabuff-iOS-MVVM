@@ -42,7 +42,7 @@ class MainController: HomeViewController {
         navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.4392156863, green: 0.3882352941, blue: 0.9176470588, alpha: 1)
     }
     
-    func setUpViewModel(){
+    func setUpViewModel() {
         viewModel.delegate = self
         viewModel.loadView()
     }

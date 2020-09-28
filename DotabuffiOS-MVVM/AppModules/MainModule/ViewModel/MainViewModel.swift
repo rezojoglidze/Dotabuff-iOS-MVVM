@@ -13,7 +13,7 @@ protocol MainViewModelDelegate: class {
     func didGetMatchIdForDetailsView(matchId: Int)
 }
 
-final class MainViewModel {
+class MainViewModel {
     
     //MARK: Class variable
     weak var delegate: MainViewModelDelegate?
