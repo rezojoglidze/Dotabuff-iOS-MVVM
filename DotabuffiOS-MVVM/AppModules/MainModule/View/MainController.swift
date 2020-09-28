@@ -11,7 +11,6 @@ import UIKit
 class MainController: HomeViewController {
     
     //MARK: Class variable
-    private var matchesIds: [Int] = []
     private lazy var viewModel = MainViewModel()
     
     //MARK: IBOutlet
@@ -44,7 +43,6 @@ class MainController: HomeViewController {
     
     func setUpViewModel() {
         viewModel.delegate = self
-        viewModel.loadView()
     }
     
     func setupTableView() {
@@ -74,27 +72,21 @@ class MainController: HomeViewController {
 
 extension MainController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return matchesIds.count
+        return viewModel.matchesIds.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainCell
-        cell.configure(with : matchesIds[indexPath.row])
+        cell.configure(with : viewModel.matchesIds[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)!
-        cell.setSelected(false, animated: true)
         viewModel.didSelectRow(at: indexPath)
     }
 }
 
 extension MainController: MainViewModelDelegate {
-    func didGetMatchesIds(matchesIds: [Int]) {
-        self.matchesIds = matchesIds
-    }
-    
     //MARK: navigation
     func didGetMatchIdForDetailsView(matchId: Int) {
       showMatchDetailsView(matchId: matchId)
